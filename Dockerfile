@@ -6,7 +6,7 @@ EXPOSE 4000
 
 WORKDIR /nextstrain/aupice
 
-COPY ./aupice_res ./data
+COPY ./aupice_res .
 
-#CMD auspice build --verbose --extend data/config.json
-CMD ["auspice", "view", "--verbose", "--datasetDir=data/aupice/", "--narrativeDir=data/aupice/"]
+RUN auspice build --verbose --extend config.json
+CMD ["auspice", "view", "--verbose", "--datasetDir=aupice/", "--narrativeDir=aupice/"]
