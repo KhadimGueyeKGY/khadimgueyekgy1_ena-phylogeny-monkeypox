@@ -1,0 +1,5 @@
+   docker build -t khadimgueyekgy1/ena-phylogeny-monkeypox .
+   docker run -d --rm --interactive --tty --init --publish=4000:4000 --name ena-phylogeny-monkeypox khadimgueyekgy1/ena-phylogeny-monkeypox
+   docker logs ena-phylogeny-monkeypox
+   docker exec -it ena-phylogeny-monkeypox bash
+   docker push khadimgueyekgy1/ena-phylogeny-monkeypox:latest
